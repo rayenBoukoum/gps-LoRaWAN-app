@@ -1,0 +1,205 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'responses.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+BaseResponse _$BaseResponseFromJson(Map<String, dynamic> json) => BaseResponse()
+  ..status = json['status'] as int?
+  ..message = json['message'] as String?;
+
+Map<String, dynamic> _$BaseResponseToJson(BaseResponse instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+    };
+
+CustomerResponse _$CustomerResponseFromJson(Map<String, dynamic> json) =>
+    CustomerResponse(
+      json['id'] as String?,
+      json['name'] as String?,
+      json['numberOfNotification'] as int?,
+    );
+
+Map<String, dynamic> _$CustomerResponseToJson(CustomerResponse instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'numberOfNotification': instance.numberOfNotification,
+    };
+
+ContactResponse _$ContactResponseFromJson(Map<String, dynamic> json) =>
+    ContactResponse(
+      json['phone'] as String?,
+      json['email'] as String?,
+      json['link'] as String?,
+    );
+
+Map<String, dynamic> _$ContactResponseToJson(ContactResponse instance) =>
+    <String, dynamic>{
+      'phone': instance.phone,
+      'email': instance.email,
+      'link': instance.link,
+    };
+
+AuthenticationResponse _$AuthenticationResponseFromJson(
+        Map<String, dynamic> json) =>
+    AuthenticationResponse(
+      json['customer'] == null
+          ? null
+          : CustomerResponse.fromJson(json['customer'] as Map<String, dynamic>),
+      json['contacts'] == null
+          ? null
+          : ContactResponse.fromJson(json['contacts'] as Map<String, dynamic>),
+    )
+      ..status = json['status'] as int?
+      ..message = json['message'] as String?;
+
+Map<String, dynamic> _$AuthenticationResponseToJson(
+        AuthenticationResponse instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'customer': instance.customer,
+      'contacts': instance.contacts,
+    };
+
+ForgotPasswordResponse _$ForgotPasswordResponseFromJson(
+        Map<String, dynamic> json) =>
+    ForgotPasswordResponse(
+      json['support'] as String?,
+    )
+      ..status = json['status'] as int?
+      ..message = json['message'] as String?;
+
+Map<String, dynamic> _$ForgotPasswordResponseToJson(
+        ForgotPasswordResponse instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'support': instance.support,
+    };
+
+DeleteObjectResponse _$DeleteObjectResponseFromJson(
+        Map<String, dynamic> json) =>
+    DeleteObjectResponse(
+      json['support'] as String?,
+    )
+      ..status = json['status'] as int?
+      ..message = json['message'] as String?;
+
+Map<String, dynamic> _$DeleteObjectResponseToJson(
+        DeleteObjectResponse instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'support': instance.support,
+    };
+
+AddObjectResponse _$AddObjectResponseFromJson(Map<String, dynamic> json) =>
+    AddObjectResponse(
+      json['support'] as String?,
+    )
+      ..status = json['status'] as int?
+      ..message = json['message'] as String?;
+
+Map<String, dynamic> _$AddObjectResponseToJson(AddObjectResponse instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'support': instance.support,
+    };
+
+EditObjectResponse _$EditObjectResponseFromJson(Map<String, dynamic> json) =>
+    EditObjectResponse(
+      json['support'] as String?,
+    )
+      ..status = json['status'] as int?
+      ..message = json['message'] as String?;
+
+Map<String, dynamic> _$EditObjectResponseToJson(EditObjectResponse instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'support': instance.support,
+    };
+
+PositionResponse _$PositionResponseFromJson(Map<String, dynamic> json) =>
+    PositionResponse(
+      (json['long'] as num?)?.toDouble(),
+      (json['lat'] as num?)?.toDouble(),
+    );
+
+Map<String, dynamic> _$PositionResponseToJson(PositionResponse instance) =>
+    <String, dynamic>{
+      'long': instance.long,
+      'lat': instance.lat,
+    };
+
+OneObjectResponse _$OneObjectResponseFromJson(Map<String, dynamic> json) =>
+    OneObjectResponse(
+      json['id'] as String?,
+      (json['batteryLevel'] as num?)?.toDouble(),
+      json['type'] as String?,
+      json['name'] as String?,
+      json['position'] == null
+          ? null
+          : PositionResponse.fromJson(json['position'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$OneObjectResponseToJson(OneObjectResponse instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'batteryLevel': instance.batteryLevel,
+      'type': instance.type,
+      'name': instance.name,
+      'position': instance.position,
+    };
+
+MapObjectsResponse _$MapObjectsResponseFromJson(Map<String, dynamic> json) =>
+    MapObjectsResponse(
+      (json['objects'] as List<dynamic>?)
+          ?.map((e) => OneObjectResponse.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    )
+      ..status = json['status'] as int?
+      ..message = json['message'] as String?;
+
+Map<String, dynamic> _$MapObjectsResponseToJson(MapObjectsResponse instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'objects': instance.objects,
+    };
+
+ObjectDetailsResponse _$ObjectDetailsResponseFromJson(
+        Map<String, dynamic> json) =>
+    ObjectDetailsResponse(
+      json['id'] as String?,
+      (json['batteryLevel'] as num?)?.toDouble(),
+      json['type'] as String?,
+      json['createdAt'] as String?,
+      json['name'] as String?,
+      (json['farFromYou'] as num?)?.toDouble(),
+      json['position'] == null
+          ? null
+          : PositionResponse.fromJson(json['position'] as Map<String, dynamic>),
+    )
+      ..status = json['status'] as int?
+      ..message = json['message'] as String?;
+
+Map<String, dynamic> _$ObjectDetailsResponseToJson(
+        ObjectDetailsResponse instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'id': instance.id,
+      'batteryLevel': instance.batteryLevel,
+      'type': instance.type,
+      'createdAt': instance.createdAt,
+      'name': instance.name,
+      'farFromYou': instance.farFromYou,
+      'position': instance.position,
+    };
